@@ -1,0 +1,54 @@
+#hero {
+  @include align-center;
+  margin-top: 6rem;
+  width: 100%;
+
+  .container {
+    .hero {
+      &__wrapper {
+        @include align-center;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: center;
+
+        @include large {
+          flex-direction: row;
+        }
+
+        &-left {
+          flex: 1;
+          text-align: center;
+          margin-top: -2rem;
+
+          @include large {
+            text-align: left;
+            margin-top: -4rem;
+          }
+
+          h1 {
+            @include title;
+          }
+
+          p {
+            @include paragraph;
+            margin: 0.75rem 0 2rem 0;
+          }
+
+          a {
+            @include button-basic;
+          }
+        }
+
+        &-right {
+          flex: 1;
+          display: flex;
+          align-items: flex-end;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

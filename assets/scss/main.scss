@@ -1,0 +1,15 @@
+// SCSS files import
+@import "reset";
+@import "base";
+@import "media-queries";
+@import "colors";
+
+// Pages Style Import
+@import "pages/navbar";
+@import "pages/hero";
+@import "pages/service";
+@import "pages/advantages";
+@import "pages/testimonial";
+@import "pages/getting-started";
+@import "pages/faq";
+@import "pages/footer";

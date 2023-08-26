@@ -1,0 +1,62 @@
+#service {
+  margin-top: 6.51rem;
+
+  .container {
+    .service {
+      &__wrapper {
+        @include align-center;
+        flex-direction: column;
+        gap: 2rem;
+
+        @include large {
+          flex-direction: row;
+        }
+
+        &-left {
+          @include align-center;
+          justify-content: center;
+          flex: 1;
+
+          img {
+            width: 80%;
+          }
+        }
+
+        &-right {
+          flex: 1;
+
+          h2 {
+            @include subtitle;
+          }
+
+          p {
+            @include paragraph;
+            margin: 0.75rem 0 1rem 0;
+          }
+
+          ul {
+            li {
+              @include paragraph;
+              @include align-center;
+              margin-bottom: 0.75rem;
+
+              span {
+                padding: 0.5rem;
+                margin-right: 1rem;
+                background: $soft-blue;
+                border-radius: 50%;
+
+                @include align-center;
+
+                img {
+                  width: 1.25rem;
+                  height: auto;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

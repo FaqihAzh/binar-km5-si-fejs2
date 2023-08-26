@@ -1,0 +1,74 @@
+#faq {
+  margin-top: 6.51rem;
+
+  .container {
+    .faq {
+      &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+
+        @include large {
+          flex-direction: row;
+          text-align: left;
+        }
+
+        &-left {
+          flex: 1;
+
+          h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 2.25rem;
+            color: $black-neutral;
+            margin-bottom: 1rem;
+          }
+
+          p {
+            font-weight: 300;
+            line-height: 1.825rem;
+            color: $black-neutral;
+          }
+        }
+
+        &-right {
+          flex: 1;
+
+          .accordion {
+            gap: 1rem;
+            flex-direction: column;
+            display: flex;
+
+            &-item {
+              border: none;
+            }
+
+            &-button {
+              border-radius: 0.5rem;
+              border: 1px solid $grey-neutral;
+              color: $black-neutral;
+              font-weight: 300;
+              line-height: 1.625rem;
+
+              &:focus {
+                background: $white-neutral;
+                box-shadow: none;
+              }
+
+              &:not(.collapsed) {
+                background: $white-neutral;
+              }
+            }
+
+            &-body {
+              color: $black-neutral;
+              font-weight: 300;
+              line-height: 1.625;
+            }
+          }
+        }
+      }
+    }
+  }
+}

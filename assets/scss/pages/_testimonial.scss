@@ -1,0 +1,141 @@
+#testimoni {
+  margin-top: 6.51rem;
+
+  .container {
+    .testimoni {
+      &__wrapper {
+        text-align: center;
+        box-sizing: border-box;
+
+        h2 {
+          font-size: 1.5rem;
+          font-weight: 700;
+          line-height: 2.25rem;
+          color: $black-neutral;
+        }
+
+        p {
+          font-weight: 300;
+          line-height: 1.825rem;
+          color: $black-neutral;
+          margin: 1rem 0;
+        }
+
+        &-list {
+          margin-top: 2.5rem;
+          height: 100%;
+
+          &-card {
+            background: $bg-white;
+            display: flex;
+            flex-direction: column;
+            gap: 2.88rem;
+            border-radius: 0.8125rem;
+            box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+            padding: 2.5rem 2rem;
+
+            @include large {
+              padding: 4.31rem 2.88rem;
+              flex-direction: row;
+            }
+
+            &-image {
+              flex: 1;
+
+              @include align-center;
+              max-width: 6rem;
+              height: auto;
+              align-self: center;
+
+              img {
+                max-width: 100%;
+              }
+            }
+
+            &-testi {
+              flex: 1;
+              text-align: left;
+              margin-top: -1rem;
+
+              @include large {
+                margin-top: 0;
+              }
+
+              div:nth-child(1) {
+                text-align: center;
+
+                @include large {
+                  text-align: left;
+                }
+              }
+              p {
+                font-weight: 300;
+                line-height: 1.625rem;
+                margin: 1rem 0;
+
+                @include large {
+                  margin: 0.5rem 0;
+                }
+              }
+
+              h4 {
+                font-weight: 500;
+                line-height: 1.625rem;
+                margin: 0;
+                font-size: 0.825rem;
+              }
+            }
+          }
+
+          .swiper {
+            &-slide {
+              div {
+                position: relative;
+                overflow: hidden;
+              }
+            }
+
+            &-custom {
+              &-nav {
+                z-index: 10;
+                padding: 0 2rem;
+                display: flex;
+                justify-content: center;
+                margin-top: 1rem;
+                gap: 1.5rem;
+                width: 100%;
+
+                &-btn {
+                  background: $white-neutral;
+                  border-radius: 50%;
+                  width: 2rem;
+                  height: auto;
+                  padding: 0.25rem;
+                  border: 1px solid $grey-neutral;
+                  cursor: pointer;
+                  transition: all 0.3s ease-in-out;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+
+                  svg {
+                    stroke: $black-soft;
+                  }
+
+                  &:hover {
+                    background: $lime-green;
+                    border: 1px solid $white-neutral;
+
+                    svg {
+                      stroke: $white-neutral;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

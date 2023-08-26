@@ -1,0 +1,60 @@
+@import "media-queries";
+
+html,
+body {
+  font-family: "Poppins", sans-serif !important;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  max-width: 1440px;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 1.5rem;
+
+  max-width: 100%;
+
+  @include medium {
+    max-width: 90%;
+  }
+
+  @include large {
+    max-width: 80%;
+  }
+}
+
+@mixin align-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin button-basic {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.125rem;
+  background: $lime-green;
+  color: $white-neutral;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+@mixin title {
+  font-size: 2rem;
+  color: $black-neutral;
+  font-weight: 700;
+  line-height: 3rem;
+}
+
+@mixin subtitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2.25rem;
+  color: $black-neutral;
+}
+
+@mixin paragraph {
+  color: $black-neutral;
+  line-height: 1.825rem;
+  font-weight: 300;
+}

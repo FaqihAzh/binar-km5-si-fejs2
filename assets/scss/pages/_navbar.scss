@@ -1,0 +1,114 @@
+%align-center {
+  display: flex;
+  align-items: center;
+}
+
+header {
+  background: $bg-white;
+  padding-top: 1rem;
+
+  .nav {
+    position: fixed;
+    background: $bg-white;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+
+    @include large {
+      position: static;
+    }
+
+    &__wrapper {
+      @include align-center;
+      justify-content: space-between;
+      padding: 1.25rem 0;
+
+      @include large {
+        padding: 1rem 0;
+      }
+    }
+
+    &__brand a {
+      color: $black-neutral;
+      font-size: 1.75rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    &__menu {
+      display: none;
+
+      &.active {
+        display: flex;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100vh;
+        background: $white-neutral;
+        padding: 1.625rem 2rem;
+        flex-direction: column;
+        gap: 2.5rem;
+        z-index: 100;
+
+        @include medium {
+          width: 35%;
+        }
+      }
+
+      @include large {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        position: relative;
+        width: max-content;
+      }
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      @include large {
+        flex-direction: row;
+        gap: 2rem;
+      }
+    }
+
+    &__item {
+      &:first-child {
+        display: flex;
+        font-weight: 600;
+
+        @include large {
+          display: none;
+        }
+      }
+    }
+
+    &__link {
+      color: $black-neutral;
+      text-decoration: none;
+    }
+
+    &__hamburger {
+      display: flex;
+      cursor: pointer;
+      font-size: 1.5rem;
+      z-index: 200;
+
+      @include large {
+        display: none;
+      }
+
+      img {
+        transition: transform 0.3s ease;
+      }
+    }
+
+    &__btn {
+      @include button-basic;
+    }
+  }
+}
