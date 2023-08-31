@@ -1,14 +1,14 @@
 // Question 1
 // changeWord function => Fungsi mengganti/mengubah kata
 
-function ChangeWord(selectedText, changedText, text) {
+const ChangeWord = (selectedText, changedText, text) => {
   const findText = new RegExp(selectedText, "gi");
   const newText = text.replace(findText, changedText);
 
   const result = newText === text ? "The word is not found" : newText;
 
   return result;
-}
+};
 
 const firstSentences =
   "Gunung Bromo tak akan mampu menggambarkan besarnya cintaku padamu";
@@ -22,7 +22,7 @@ console.log(ChangeWord("Wakanda", "Indonesia", secondSentences));
 // Question 2
 // checkTypeNumber function => Fungsi identifikasi kategori angka (Ganjil-Genap)
 
-function checkTypeNumber(givenNumber) {
+const checkTypeNumber = (givenNumber) => {
   if (givenNumber === undefined || givenNumber === null) {
     return "Error: Bro where is the parameter?";
   } else if (typeof givenNumber !== "number") {
@@ -34,7 +34,7 @@ function checkTypeNumber(givenNumber) {
       return "GANJIL";
     }
   }
-}
+};
 
 console.log("\nQuestion 2");
 console.log(checkTypeNumber(10));
@@ -46,7 +46,7 @@ console.log(checkTypeNumber());
 // Question 3
 // getAngkaTerbesarKedua function => Fungsi untuk mendapatkan angka terbesar kedua dari sebuah array
 
-function getAngkaTerbesarKedua(dataNumbers) {
+const getAngkaTerbesarKedua = (dataNumbers) => {
   if (dataNumbers === undefined || dataNumbers === null) {
     return "Error: Bro where is the parameter?";
   } else if (!Array.isArray(dataNumbers)) {
@@ -57,7 +57,7 @@ function getAngkaTerbesarKedua(dataNumbers) {
     const sortedNumbers = dataNumbers.slice().sort((a, b) => b - a);
     return sortedNumbers[1];
   }
-}
+};
 
 const dataArray = [9, 4, 7, 7, 4, 3, 2, 2, 8];
 const dataArrayFalse = [8];
@@ -98,7 +98,7 @@ const dataPenjualanPakAldi = [
   },
 ];
 
-function getTotalPenjualan(dataPenjualanPakAldi) {
+const getTotalPenjualan = (dataPenjualanPakAldi) => {
   if (!Array.isArray(dataPenjualanPakAldi)) {
     return "Error: Data must be an array of object!";
   } else {
@@ -112,7 +112,7 @@ function getTotalPenjualan(dataPenjualanPakAldi) {
     }
     return total;
   }
-}
+};
 
 console.log("\nQuestion 4");
 console.log(getTotalPenjualan(dataPenjualanPakAldi));
@@ -171,14 +171,14 @@ const dataPenjualanError = [
   },
 ];
 
-function formatCurrency(amount) {
+const formatCurrency = (amount) => {
   return new Intl.NumberFormat("id-ID", {
     style: "currency",
     currency: "IDR",
   }).format(amount);
-}
+};
 
-function getInfoPenjualan(dataPenjualanIbuDaneila) {
+const getInfoPenjualan = (dataPenjualanIbuDaneila) => {
   if (!Array.isArray(dataPenjualanIbuDaneila)) {
     return "Error: Data must be an array of objects!";
   } else {
@@ -235,7 +235,7 @@ function getInfoPenjualan(dataPenjualanIbuDaneila) {
       persentaseKeuntungan: persentaseKeuntungan.toFixed(2) + "%",
     };
   }
-}
+};
 
 console.log("\nQuestion 5");
 console.log(getInfoPenjualan("Error test!"));
