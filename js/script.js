@@ -23,17 +23,15 @@ console.log(ChangeWord("Wakanda", "Indonesia", secondSentences));
 // checkTypeNumber function => Fungsi identifikasi kategori angka (Ganjil-Genap)
 
 const checkTypeNumber = (givenNumber) => {
-  if (givenNumber === undefined || givenNumber === null) {
+  if (givenNumber == null) {
     return "Error: Bro where is the parameter?";
-  } else if (typeof givenNumber !== "number") {
-    return "Error: Tipe data tidak valid!";
-  } else {
-    if (givenNumber % 2 === 0) {
-      return "GENAP";
-    } else {
-      return "GANJIL";
-    }
   }
+
+  if (typeof givenNumber !== "number") {
+    return "Error: Invalid data type!";
+  }
+
+  return givenNumber % 2 === 0 ? "GENAP" : "GANJIL";
 };
 
 console.log("\nQuestion 2");
