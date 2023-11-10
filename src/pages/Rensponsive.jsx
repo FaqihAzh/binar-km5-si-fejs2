@@ -17,12 +17,12 @@ const Rensponsive = () => {
             <div className="flex justify-center items-center h-2/6  w-full bg-[#5C38EB] lg:hidden">
               <span className="text-white font-semibold text-2xl">Ungu</span>
             </div>
-            <div className="flex justify-between gap-4 items-center h-2/6 lg:h-3/6 w-full">
-              <div className="flex justify-center items-center h-full w-full bg-[#38C0EB] md:bg-[#EB38AE]">
-                <span className="text-white font-semibold text-2xl">Biru</span>
-              </div>
+            <div className="flex justify-between md:flex-row-reverse gap-4 items-center h-2/6 lg:h-3/6 w-full">
               <div className="flex justify-center items-center h-full w-full bg-[#EB38AE]">
                 <span className="text-white font-semibold text-2xl">Pink</span>
+              </div>
+              <div className="flex justify-center items-center h-full w-full bg-[#38C0EB] md:bg-[#EB38AE] lg:bg-[#38C0EB]">
+                <span className="text-white font-semibold text-2xl">Biru</span>
               </div>
             </div>
             <div className="flex justify-center items-center h-2/6 lg:h-3/6 w-full bg-[#38EB55]">
