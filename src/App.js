@@ -3,9 +3,10 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 // import Register from "./components/Auth/Register";
 // import Login from "./components/Auth/Login";
 import { Route, Routes } from "react-router-dom";
-import ReduxPractice from "./pages/ReduxPractice";
+// import ReduxPractice from "./pages/ReduxPractice";
 import { Provider } from "react-redux";
 import store from "./redux/store";
+import Rensponsive from "./pages/Rensponsive";
 // import Dashboard from "./pages/Dashboard";
 // import { Provider } from "react-redux";
 // import store from "./redux/store";
@@ -18,7 +19,7 @@ function App() {
       <Provider store={store}>
         <QueryClientProvider client={queryClient}>
           <Routes>
-            <Route path="/" element={<ReduxPractice />} />
+            <Route path="/" element={<Rensponsive />} />
             {/* <Hero /> */}
             {/* <Route path="/" element={<Dashboard />} />
           <Route path="/login" element={<Login />} />

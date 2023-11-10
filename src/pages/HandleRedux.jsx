@@ -34,8 +34,10 @@ const HandleRedux = ({ data }) => {
   };
 
   const handleAddNewBedak = () => {
-    dispatch(addBedak(newBedak));
-    setNewBedak("");
+    if (newBedak.trim() !== "") {
+      dispatch(addBedak(newBedak));
+      setNewBedak("");
+    }
   };
 
   const handleRemoveSelectedBedak = (bedak) => {
@@ -95,7 +97,7 @@ const HandleRedux = ({ data }) => {
           className="px-4 py-2 bg-red-600 font-semibold rounded-xl text-white w-full"
           onClick={handleRemoveAbsurd}
         >
-          Hapus Absurd
+          Hapus Pop
         </button>
       </div>
 

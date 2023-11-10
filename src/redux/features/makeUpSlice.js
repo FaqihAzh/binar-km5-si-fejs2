@@ -15,7 +15,9 @@ const makeUpSlice = createSlice({
       state.makeUp.jumlahMakeUp += 1;
     },
     decrement: (state) => {
-      state.makeUp.jumlahMakeUp -= 1;
+      if (state.makeUp.jumlahMakeUp > 0) {
+        state.makeUp.jumlahMakeUp -= 1;
+      }
     },
     updateBrand: (state, action) => {
       const { namaBrand, penerbit } = action.payload;
@@ -47,6 +49,7 @@ const {
   removeAbsurd,
 } = makeUpSlice.actions;
 
+export default makeUpReducer;
 export {
   increment,
   decrement,
@@ -55,4 +58,3 @@ export {
   removeBedak,
   removeAbsurd,
 };
-export default makeUpReducer;
