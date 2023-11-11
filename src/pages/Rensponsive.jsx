@@ -3,7 +3,7 @@ import React from "react";
 const Rensponsive = () => {
   return (
     <>
-      <div className="p-4 space-y-4 w-full h-screen box-border">
+      <div className="p-4 space-y-4 w-full h-screen">
         <div className="flex justify-end md:justify-center w-full h-1/6 ">
           <div className="bg-[#EB3838] w-1/3 md:w-full h-full flex justify-center items-center">
             <span className="text-white font-semibold text-2xl">Merah</span>
