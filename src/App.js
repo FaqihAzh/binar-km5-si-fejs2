@@ -1,15 +1,16 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { Route, Routes } from "react-router-dom";
+import { Provider } from "react-redux";
 // import Hero from "./components/Hero";
 // import Register from "./components/Auth/Register";
 // import Login from "./components/Auth/Login";
-import { Route, Routes } from "react-router-dom";
 // import ReduxPractice from "./pages/ReduxPractice";
-import { Provider } from "react-redux";
-import store from "./redux/store";
-import Rensponsive from "./pages/Rensponsive";
 // import Dashboard from "./pages/Dashboard";
 // import { Provider } from "react-redux";
 // import store from "./redux/store";
+import store from "./redux/store";
+import Rensponsive from "./pages/Rensponsive";
+import Deployment from "./pages/Deployment";
 
 function App() {
   const queryClient = new QueryClient();
@@ -19,7 +20,8 @@ function App() {
       <Provider store={store}>
         <QueryClientProvider client={queryClient}>
           <Routes>
-            <Route path="/" element={<Rensponsive />} />
+            <Route path="/" element={<Deployment />} />
+            <Route path="/responsive" element={<Rensponsive />} />
             {/* <Hero /> */}
             {/* <Route path="/" element={<Dashboard />} />
           <Route path="/login" element={<Login />} />
